@@ -89,16 +89,18 @@ public class MainActivity extends AppCompatActivity {
         EditText inputTelefone = findViewById(R.id.inputTelefone);
         EditText inputEmail = findViewById(R.id.inputEmail);
 
-        contact.setNome(setValidValue(inputNome));
-        contact.setSobrenome(setValidValue(inputSobrenome));
-        contact.setTelefone(setValidValue(inputTelefone));
-        contact.setEmail(setValidValue(inputEmail));
+        if (inputNome != null) {
+            contact.setNome(inputNome.getText().toString());
+        }
+        if (inputSobrenome != null) {
+            contact.setSobrenome(inputSobrenome.getText().toString());
+        }
+        if (inputTelefone != null) {
+            contact.setTelefone(inputTelefone.getText().toString());
+        }
+        if (inputEmail != null) {
+            contact.setEmail(inputEmail.getText().toString());
+        }
     }
 
-    private String setValidValue(EditText editText) {
-        if (editText == null){
-            return "";
-        }
-        return editText.getText().toString();
-    }
 }

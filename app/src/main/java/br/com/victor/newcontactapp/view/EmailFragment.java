@@ -25,24 +25,9 @@ public class EmailFragment extends Fragment {
         inputEmail.setText(contact.getEmail());
     }
 
-
     @Override
     public void onPause() {
         super.onPause();
-        EditText inputEmail = getActivity().findViewById(R.id.inputEmail);
-        contact.setEmail(inputEmail.getText().toString());
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        EditText inputEmail = getActivity().findViewById(R.id.inputEmail);
-        contact.setEmail(inputEmail.getText().toString());
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
         EditText inputEmail = getActivity().findViewById(R.id.inputEmail);
         contact.setEmail(inputEmail.getText().toString());
     }
